@@ -16,7 +16,7 @@ We have intercepted some data, but do not know how to read it (attached).
 There is a password somewhere. We have to find it to stop terrorists.
 Would you like to join our team? Help us and we will help you in the future.
 
-It’s not clear how to start. Our flink(?) told us that the key is somehow related with three key phrases: `guns`, `and`, `roses`
+It’s not clear how to start. Our informer told us that the key is somehow related with three key phrases: `guns`, `and`, `roses`
 Probably these are the names of some messages.
 Would you like to check if you have access to any of them?
 
