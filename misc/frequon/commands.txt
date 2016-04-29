@@ -16,8 +16,9 @@ We have intercepted some data, but do not know how to read it (attached).
 There is a password somewhere. We have to find it to stop terrorists.
 Would you like to join our team? Help us and we will help you in the future.
 
-It’s not clear how to start. Our informer told us that the key is somehow related with three key phrases: `guns`, `and`, `roses`
-Probably these are the names of some messages.
+It’s not clear how to start. Our informer told us that the key is somehow
+related with three key phrases: `guns`, `and`, `roses`.
+Probably these are the names of some messages / datasets.
 Would you like to check if you have access to any of them?
 
 If you want to help, please type:
@@ -41,15 +42,17 @@ Thank you for the message, it looks interesting... However, this text
 is too long to be the password that we are seeking for. This must be some coded
 message. If only we could know the key...
 
-But let`s take a look, the `p` letter appears very often. And
-`i` doesn`t. In english language letter `e` occures
+But let`s take a look.
+The `p` letter appears very often.
+And `i` doesn`t. In english language letter `e` occures
 the most often. If we knew how often each letter is used in
 the message, we could compare them with well-known English
 letter frequencies! So let`s do this!
 
-We are going to prepare data about frequencies of letters
-in English language, so if you could find the frequencies in the messages,
-that would be awesome (to trzeba zmienic :P).
+Take the message that you have found, remove everything that is not a letter
+and calculate frequencies of letters.
+The result should be be a named vector with names corresponding to letters and values
+corresponding to number of occuraces.
 
 Send us a reply: `frequon(subject = "Re: Frequencies", content = `freq`)` as soon as you
 finish. `freq` is the vector of frequencies for each letter.
@@ -66,13 +69,15 @@ Subject: Transcription
 Great job! Now, when we do know which letters are used the most often
 and which are the least common, we can combine them with well-known
 english frequencies of letters. We have prepared and attached
-the `EnglishLetterFrequency` dataset. It contains 
+the `EnglishLetterFrequency` dataset. It contains
 frequencies of letters in the English language.
 
 Now you can substitute old ciphered letters with the new
-English letters. Can you show us your results?
+English letters.
+Such operation is called character translation / transliteration.
+Can you pass the transliterated messade to us?
 
-Send us reply: `frequon(subject = "Re: Transcription", content = "textyouwillget")`.
+Send us reply: `frequon(subject = "Re: Transcription", content = "text_you_will_get")`.
 We wish you luck!
 
 Best regards!
@@ -86,22 +91,26 @@ To: c81632dce28ca740f2f2503656f3d62a@mail.tor
 Subject: Key
 
 Well done! We are so close now! Our message looks a little bit familiar.
-There are even some words that we know. But there are still some words that are 
-looking strange. It means that our key is not completely
-correct and we need to investigate these letters that were
-mistranslated.
+There are even some words that we can recognize.
+But there are still some words that are looking strange.
+It means that our key is not completely correct and we need to
+correct these letters that were mistranslated.
 
-There is one idea how to do this.
+Let's use the word frequency to correct the transliteration.
 
 Let's count all the words.
 Those which appear the most often are for us easy to amend.
 The ones which apperar the least often are perhaps easily recognisable nouns?
 
 Take advantage of `top100commonWords`.
+Find the right transliteration in order to decode it into the proper English.
+Work with lowercased text.
 
 Type:
 `frequon( subject="Re: Key", content=c(old = "abcdef....z", new = "newlettersrespectively"))`,
 where `old` are the letters in the code`s sense and `new` are fitted real letters.
+
+Good luck!
 
 ## TASK: task4
 
@@ -120,10 +129,11 @@ Perhaps our friend used the key
 to cipher the names of the two remaining messages?
 Can you have access to them now?
 
+Transliterate these names: 'guns', 'and', 'roses' and check if there are datasets with these new names.
+
 Please, send us reply:
-`frequon(subject = "Re: Next text: X",
-          content = "Content of the unlocked message")`,
-where "X" is the name of the message thatyou are able to unlock.
+`frequon(subject = "Re: Next text",
+          content = "Content of the unlocked message")`.
 
 We would be grateful.
 
@@ -137,28 +147,30 @@ Subject: Lengths in the text
 
 Obviously this message is also ciphered. We tried to use the key
 but unfortunately it turned out that it was written in a language that we don`t know.
+
 Can you recognize the langague?
 
-Don`t worry! We know a simple idea how to recognize the language of any
+We know a simple idea how to recognize the language of any
 ciphered message. All you need to do is to measure the length of each word. If we knew
 how many words had the lengths of 1, 2, 3, and so on, we could compare
-them with the lengths of the words in languages that we know! Naturally, we need a
-huge amount of words in many languages. Fortunately we have a sample from
-wikipedia resources, so we can share it with you.
-Please, find the `wikiquotes` attachment. There is a list of quotes in many languages.
+them with the lengths of the words in languages that we know!
+
+Naturally, we need a huge amount of words in many languages.
+Fortunately we have a sample from wikipedia resources, so we can share it with you.
+Please, find the `wikiquotes` attached.
+
+There is a list of quotes in many languages.
 We hope this will be enough for our needs.
 
-This is a time-consuming job to measure the length of each word for all of the languages, but we believe that
-you know some fast way to cope with this problem.
+Note that different languages are using different letters, thus to find words use the space ` ` as a separator.
+
+This is a time-consuming job to measure the length of each word for all of the languages, but we believe that you know some fast way to cope with this problem.
 
 Send us your results:
 `frequon(subject="Re: Lengths in the text", content = `lengths`, attachment = `wiki_lengths`)`.
-`lengths` is the vector of tabeled length of all words.
-`wiki_lengths` is the list of tabeled length of all words for each language.
+`lengths` is the vector of counts of words of given length (named vector with names - lengths and values - counts).
+`wiki_lengths` is the list with vectors of counts for each language.
 Please, remember to name this list with apropriate languages!
-
-By using this data we would be able to prepare couple barplots to sum up 
-the similarities between distribution of the lengths in our message and known languages.
 
 ## TASK: task6
 
@@ -168,11 +180,15 @@ From: 154eb7278fc44650bdd2bb39bb2b5c69@mail.tor
 To: c81632dce28ca740f2f2503656f3d62a@mail.tor
 Subject: Language in the message
 
-Well done! Thanks to your results we obtain excellent barplots (you can probably
-see them in your magic program :P). Now we can investigate
-what language was used to prepare the second message.
-What do you think? Which distribution is the most similar to
-the distribution of the lengths in our message?
+Well done!
+
+Now we need to compare frequencies for our message and frequencies for other languages.
+Try to plot barplots for each language and then a barplot for out message.
+It will be easier to compare these frequencies graphically.
+
+Now we can investigate what language was used to prepare the second message.
+What do you think?
+Which distribution is the most similar to the distribution of the lengths in our message?
 
 Send us your thoughts! Type:
 `frequon(subject = "Re: Language in and message", content = "Language")`
@@ -187,10 +203,10 @@ To: c81632dce28ca740f2f2503656f3d62a@mail.tor
 Subject: Password
 
 We think so too. Great job! Now we have the key, we know the language ...
-Perhaps before we start translating this message, we will try to get an access 
-to the phrase 'guns'. We know that our friend likes to use the key 
+Perhaps before we start translating this message, we will try to get an access
+to the phrase 'guns'. We know that our friend likes to use the key
 from one puzzle in order to encode the name of the other one. So maybe also this time ...
-Do you know what is the Slovenian counterpart of the word 'guns'?
+Do you know what is the Lithuanian counterpart of the word 'guns'?
 
 We are responsible for translating the message. If you find something interesting
 in the third of our messages, let us know, please!
@@ -204,7 +220,7 @@ You've Got Mail
 
 From: 154eb7278fc44650bdd2bb39bb2b5c69@mail.tor
 To: c81632dce28ca740f2f2503656f3d62a@mail.tor
-Subject: You are the champion!
+Subject: You are the best!
 
 ## TASK: hint1
 
@@ -226,6 +242,11 @@ To see which letters occure the most frequently use `sort()`.
 
 Manual subsitution may by pretty demanding. This is why you may appreciate a `chartr()` function :) Remember to convert all
 letters to lowercases.
+
+## TASK: hint0
+
+Check if you have access to any data with name like `guns`, `and` or `roses`.
+If yes, then send it through the `frequon()` function.
 
 ## TASK: hint4
 
@@ -266,8 +287,10 @@ Replace all the NAs and then try to pass the vector again.
 
 ## TASK: errorFrequencies
 
-There is something wrong with the given frequencies... Have you converted the text to
-lowercase? Are you sure you did this properly?
+There is something wrong with the given frequencies...
+Have you converted the text to lowercase?
+Are you sure you did this properly?
+Some letters do not occure in the message (like 'k'), but make sure that frequency for them is 0 in the vector.
 
 ## TASK: errorNoNAMES
 
@@ -319,8 +342,11 @@ to `wikiquotes` names.
 
 ## TASK: errorLengths
 
-There is something wrong with the way you count the lengths of the words in the message
-or the `wikiqoutes` file. Please, try again.
+There is something wrong with the way you count the lengths of the words in the message. Please, try again. It should be a names vector woth number of words with given length.
+
+## TASK: errorLengths0
+
+Lengths of words in message are ok, but something is wrong with the way you count the lengths of the words in `wikiqoutes` file. The result should be a list with names of languages and vectors of frequencies. Please, try again.
 
 ## TASK: errorLanguage
 
