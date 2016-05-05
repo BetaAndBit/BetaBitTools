@@ -324,7 +324,7 @@ Are you sure that everything is all right?
 
 ## TASK: errorBadX
 
-(? I don't understand what the author meant) According to the first our remaining messages are named "guns" and "and".
+According to the first our remaining messages are named "guns" and "and".
 This is why X should be one of these names.
 
 ## TASK: errorBadX2
