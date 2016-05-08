@@ -51,7 +51,7 @@ letter frequencies! So let`s do this!
 
 Take the message that you have found, remove everything that is not a letter
 and calculate frequencies of letters.
-The result should be be a named vector with names corresponding to letters and values
+The result should be a named vector with names corresponding to letters and values
 corresponding to number of occuraces.
 
 Send us a reply: `frequon(subject = "Re: Frequencies", content = `freq`)` as soon as you
