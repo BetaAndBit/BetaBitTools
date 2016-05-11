@@ -16,8 +16,7 @@ We have intercepted some data, but do not know how to read it (attached).
 There is a password somewhere. We have to find it to stop terrorists.
 Would you like to join our team? Help us and we will help you in the future.
 
-It's not clear how to start. Our informer told us that the key is somehow
-related with three key phrases: `guns`, `and`, `roses`.
+It's not clear how to start. Our informer told us that the key is somehow related with three key phrases: `guns`, `and`, `roses`.
 Probably these are the names of some messages / datasets.
 Would you like to check if you have access to any of them?
 
@@ -38,24 +37,19 @@ Subject: Frequencies
 
 We are so glad you want to help us!
 
-Thank you for the message, it looks interesting... However, this text
-is too long to be the password that we are seeking for. This must be some coded
-message. If only we could know the key...
+Thank you for the message, it looks interesting...
+However, this text is too long to be the password that we are seeking for.
+This must be some coded message. If only we could know the key...
 
 But let`s take a look.
 The `p` letter appears very often.
-And `i` doesn`t. In english language letter `e` occures
-the most often. If we knew how often each letter is used in
-the message, we could compare them with well-known English
-letter frequencies! So let`s do this!
+And `i` doesn`t. In English language letter `e` occurs most often.
+If we knew how often each letter is used in the message, we could compare them with well-known English letter frequencies! So let`s do this!
 
-Take the message that you have found, remove everything that is not a letter
-and calculate frequencies of letters.
-The result should be a named vector with names corresponding to letters and values
-corresponding to number of occuraces.
+Take the message that you have found, remove everything that is not a letter and calculate frequencies of letters.
+The result should be a named vector with names corresponding to letters and values corresponding to number of occurrences.
 
-Send us a reply: `frequon(subject = "Re: Frequencies", content = `freq`)` as soon as you
-finish. `freq` is the vector of frequencies for each letter.
+Send us a reply: `frequon(subject = "Re: Frequencies", content = `freq`)` as soon as you finish. `freq` is the vector of frequencies for each letter.
 Please, remember to name this vector with appropriate letters!
 
 ## TASK: task2
@@ -66,16 +60,13 @@ From: 154eb7278fc44650bdd2bb39bb2b5c69@mail.tor
 To: c81632dce28ca740f2f2503656f3d62a@mail.tor
 Subject: Transcription
 
-Great job! Now, when we do know which letters are used the most often
-and which are the least common, we can combine them with well-known
-english frequencies of letters. We have prepared and attached
-the `EnglishLetterFrequency` dataset. It contains
-frequencies of letters in the English language.
+Great job! Now, when we do know which letters are used the most often and which are the least common, we can combine them with well-known English frequencies of letters.
+We have prepared and attached the `EnglishLetterFrequency` dataset.
+It contains frequencies of letters in the English language.
 
-Now you can substitute old ciphered letters with the new
-English letters.
+Now you can substitute old ciphered letters with the new English letters.
 Such operation is called character translation / transliteration.
-Can you pass the transliterated messade to us?
+Can you pass the transliterated message to us?
 
 Send us reply: `frequon(subject = "Re: Transcription", content = "text_you_will_get")`.
 We wish you luck!
@@ -93,22 +84,20 @@ Subject: Key
 Well done! We are so close now! Our message looks a little bit familiar.
 There are even some words that we can recognize.
 But there are still some words that are looking strange.
-It means that our key is not completely correct and we need to
-correct these letters that were mistranslated.
+It means that our key is not completely correct and we need to correct these letters that were mistranslated.
 
 Let's use the word frequency to correct the transliteration.
 
 Let's count all the words.
-Those which appear the most often are for us easy to amend.
-The ones which apperar the least often are perhaps easily recognisable nouns?
+Those, which appear the most often, are for us easy to amend.
+The ones which appear the least often are perhaps easily recognisable nouns?
 
 Take advantage of `top100commonWords`.
 Find the right transliteration in order to decode it into the proper English.
 Work with lowercased text.
 
 Type:
-`frequon( subject="Re: Key", content=c(old = "abcdef....z", new = "newlettersrespectively"))`,
-where `old` are the letters in the code`s sense and `new` are fitted real letters.
+`frequon( subject="Re: Key", content=c(old = "abcdef....z", new = "newlettersrespectively"))`, where `old` are the letters in the code`s sense and `new` are fitted real letters.
 
 Good luck!
 
@@ -125,8 +114,7 @@ Excellent work, you have cracked the code!
 However, there is no password in here.
 There must be some clue in this message...
 
-Perhaps our friend used the key
-to cipher the names of the two remaining messages?
+Perhaps our friend used the key to cipher the names of the two remaining messages?
 Can you have access to them now?
 
 Transliterate these names: 'guns', 'and', 'roses' and check if there are datasets with these new names.
@@ -145,13 +133,11 @@ From: 154eb7278fc44650bdd2bb39bb2b5c69@mail.tor
 To: c81632dce28ca740f2f2503656f3d62a@mail.tor
 Subject: Lengths in the text
 
-This message is written in a language that we don`t know.
-Can you recognize the langague?
+This message is written in a language that we cannot don`t know.
+Can you recognize the language?
 
-We know a simple idea how to recognize the language of any message. 
-All you need to do is to measure the length of each word. If we knew
-how many words had the lengths of 1, 2, 3, and so on, we could compare
-them with the lengths of the words in languages that we know!
+We know a simple idea how to recognize the language of any message.
+All you need to do is to measure the length of each word. If we knew how many words had the lengths of 1, 2, 3, and so on, we could compare them with the lengths of the words in languages that we know!
 
 Naturally, we need a huge amount of words in many languages.
 Fortunately we have a sample from wikipedia resources, so we can share it with you.
@@ -168,7 +154,7 @@ Send us your results:
 `frequon(subject="Re: Lengths in the text", content = `lengths`, attachment = `wiki_lengths`)`.
 `lengths` is the vector of counts of words of given length (named vector with names - lengths and values - counts).
 `wiki_lengths` is the list with vectors of counts for each language.
-Please, remember to name this list with apropriate languages!
+Please, remember to name this list with appropriate languages!
 
 ## TASK: task6
 
@@ -200,14 +186,12 @@ From: 154eb7278fc44650bdd2bb39bb2b5c69@mail.tor
 To: c81632dce28ca740f2f2503656f3d62a@mail.tor
 Subject: Password
 
-We think so too. Great job! Now we have the key, we know the language ...
-Perhaps before we start translating this message, we will try to get an access
-to the phrase 'guns'. We know that our friend likes to use the key
-from one puzzle in order to encode the name of the other one. So maybe also this time ...
+We think so too. Great job! Now we have the key, we know the language...
+Perhaps before we start translating this message, we will try to get an access to the phrase 'guns'.
+We know that our friend likes to use the key from one puzzle in order to encode the name of the other one. So maybe also this time…
 Do you know what is the Lithuanian counterpart of the word 'guns'?
 
-We are responsible for translating the message. If you find something interesting
-in the third of our messages, let us know, please!
+We are responsible for translating the message. If you find something interesting in the third of our messages, let us know, please!
 
 Type:
 `frequon(subject = "Re: Password", content = "thePasswordYouWillFind")`.
@@ -226,20 +210,17 @@ Firstly, try to answer the following questions:
   * Does R treat "A" and "a" as the same letter?
   * Is "word" and "word," the same word for R?
 
-The functions like: "tolower()/toupper()", "gsub()" might be useful to handle these issues. Consider replacing all non-alphanumeric
-characters with empty strings ("").
-The easiest way to deal with this kind of problem is to use regex. String: "[^a-z ]" allows you to extract all non-letter charaters
-with spaces.
+The functions like: "tolower()/toupper()", "gsub()" might be useful to handle these issues. Consider replacing all non-alphanumeric characters with empty strings ("").
+The easiest way to deal with this kind of problem is to use regex. String: "[^a-z ]" allows you to extract all non-letter characters with spaces.
 
 Finally familiarize yourself with "strsplit()" and "table()" to count all of the letters easily.
 The `letters` R-object may also be very helpful for the problem.
 
-To see which letters occure the most frequently use `sort()`.
+To see which letters occur the most frequently use `sort()`.
 
 ## TASK: hint2
 
-Manual subsitution may by pretty demanding. This is why you may appreciate a `chartr()` function :) Remember to convert all
-letters to lowercases.
+Manual substitution may by pretty demanding. This is why you may appreciate a `chartr()` function :) Remember to convert all letters to lowercases.
 
 ## TASK: hint0
 
@@ -254,29 +235,26 @@ If you do this, try to put old letters in alphabetical order.
 
 ## TASK: hint5
 
-Remember that if we have `old` as ciphered letters and `new` as real ones, we need to find real letters in `new` and seek for their
-translation in the `old` character string.
+Remember that if we have `old` as ciphered letters and `new` as real ones, we need to find real letters in `new` and seek for their translation in the `old` character string.
 
 ## TASK: hint6
 
-There is a very useful function in R to measure number of characters in words. Take advantage of `nchar()` function. Remember to split
-the string into single words with `strsplit()` as you probably did before. To check the length of each word correctly pay attention to
-all comas and dots! Is the length of "dots." and "dots" the same? `gsub()` function with "[^a-z ]" regex may be helpful here (only if
-you convert your text to lowercase!).
+There is a very useful function in R to measure number of characters in words. Take advantage of `nchar()` function.
+Remember to split the string into single words with `strsplit()` as you probably did before.
+To check the length of each word correctly pay attention to all comas and dots!
+Is the length of "dots." and "dots" the same? `gsub()` function with "[.,;!:]" regex may be helpful here (only if you convert your text to lowercase!).
 
 Do the same thing with all of the elements of the `wikiquotes` list. You may use `for` loop or even `lapply` function to do this
 easier and faster!
 
 ## TASK: hint7
 
-Compare distributions using `barplot()` function for counted lengths of words in the message and counted lengths of words in all
-languages.
+Compare distributions using `barplot()` function for counted lengths of words in the message and counted lengths of words in all languages.
 
 ## TASK: errorIntro
 
-We were looking so long for somebody like you who could
-help us solve this mistery. If you don`t have access to the
-messages, than we wiil have to ask someone else :(
+We were looking so long for somebody like you who could help us solve this mystery.
+If you don`t have access to the messages, than we will have to ask someone else :(
 
 ## TASK: errorNAs
 
@@ -288,7 +266,7 @@ Replace all the NAs and then try to pass the vector again.
 There is something wrong with the given frequencies...
 Have you converted the text to lowercase?
 Are you sure you did this properly?
-Some letters do not occure in the message (like 'k'), but make sure that frequency for them is 0 in the vector.
+Some letters do not occur in the message (like 'k'), but make sure that frequency for them is 0 in the vector.
 
 ## TASK: errorNoNAMES
 
@@ -335,12 +313,11 @@ We can not open the message. Try again. Maybe you sent a bad file?
 
 ## TASK: errorWikiNames
 
-Names of attachment are incorrect. Please, send us `lengths` with names according
-to `wikiquotes` names.
+Names of attachment are incorrect. Please, send us `lengths` with names according to `wikiquotes` names.
 
 ## TASK: errorLengths
 
-There is something wrong with the way you count the lengths of the words in the message. Please, try again. It should be a names vector woth number of words with given length.
+There is something wrong with the way you count the lengths of the words in the message. Please, try again. It should be a names vector with number of words with given length.
 
 ## TASK: errorLengths0
 
@@ -348,8 +325,7 @@ Lengths of words in message are ok, but something is wrong with the way you coun
 
 ## TASK: errorLanguage
 
-We don`t think that this is the right answer. The language you suggested doesn`t fit
-our message.
+We don`t think that this is the right answer. The language you suggested doesn`t fit our message.
 
 ## TASK: errorEnd
 
@@ -358,8 +334,8 @@ else to see?
 
 ## TASK: errorAttachment
 
-It seems that you might have forgotten to attach files. Please, send this message
-with the attachement.
+It seems that you might have forgotten to attach files.
+Please, send this message with the attachment.
 
 ## TASK: errorContent
 
@@ -368,3 +344,4 @@ Did you send this message without content?
 ## TASK: errorSubject
 
 Do You Want to Send This Message Without the Subject?
+
