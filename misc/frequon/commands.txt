@@ -145,13 +145,12 @@ From: 154eb7278fc44650bdd2bb39bb2b5c69@mail.tor
 To: c81632dce28ca740f2f2503656f3d62a@mail.tor
 Subject: Lengths in the text
 
-Obviously this message is also ciphered. We tried to use the key
-but unfortunately it turned out that it was written in a language that we don`t know.
+This message is written in a language that we don`t know.
 
 Can you recognize the langague?
 
-We know a simple idea how to recognize the language of any
-ciphered message. All you need to do is to measure the length of each word. If we knew
+We know a simple idea how to recognize the language of any message. 
+All you need to do is to measure the length of each word. If we knew
 how many words had the lengths of 1, 2, 3, and so on, we could compare
 them with the lengths of the words in languages that we know!
 
