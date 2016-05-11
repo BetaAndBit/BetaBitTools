@@ -146,7 +146,6 @@ To: c81632dce28ca740f2f2503656f3d62a@mail.tor
 Subject: Lengths in the text
 
 This message is written in a language that we don`t know.
-
 Can you recognize the langague?
 
 We know a simple idea how to recognize the language of any message. 
