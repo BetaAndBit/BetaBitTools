@@ -1,10 +1,10 @@
 ## TASK: regressionInit
-                                                                                 
- _____ _          _____                         _            _____               
-|_   _| |_ ___   | __  |___ ___ ___ ___ ___ ___|_|___ ___   |   __|___ _____ ___ 
+
+ _____ _          _____                         _            _____
+|_   _| |_ ___   | __  |___ ___ ___ ___ ___ ___|_|___ ___   |   __|___ _____ ___
   | | |   | -_|  |    -| -_| . |  _| -_|_ -|_ -| | . |   |  |  |  | .'|     | -_|
   |_| |_|_|___|  |__|__|___|_  |_| |___|___|___|_|___|_|_|  |_____|__,|_|_|_|___|
-                           |___|                                                 
+                           |___|
 
 During their summer internship Beta and Bit are helping professor Pearson to analyse data from his educational research on Polish upper-secondary schools students.
 
@@ -156,7 +156,7 @@ Professor Pearson
 ## TASK: congratulations
 
 Congratulations!
-You have solved all the problems and helped me analyse the data! I’m sure that your solutions will enable me to understand the causes of educational inequalities better and thus develop effective ways to reduce them.
+You have solved all the problems and helped me analyse the data! I'm sure that your solutions will enable me to understand the causes of educational inequalities better and thus develop effective ways to reduce them.
 
 I wish you many interesting and challenging analytical problems to solve in the future! Remember: per aspera ad astra!
 
