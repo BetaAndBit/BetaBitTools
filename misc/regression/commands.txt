@@ -42,30 +42,189 @@ Professor Pearson
 
 ## TASK: regression.task2
 
+Dear Beta and Bit,
 
+The correlations you sent me are very strange. They should be positive and about twice as high! Perhaps there is something wrong with the dataset... I think that I mixed names of the variables when I was preparing the dataset. I'm sure the first sixteen names are correct, but the rest might be a mess.
+
+Can you try to identify the name of the variable that measures HISEI in the dataset? You should by able to find it because I remember that the relationship between `READ_2009` and HISEI was nearly perfectly linear (although not very strong).
+
+When you're done, please send me back the correct name of the variable that describes HISEI by calling:
+  `regression(subject = "Name of the variable", content = "name of the variable describing HISE")`
+
+Best regards
+
+Professor Pearson
 
 ## TASK: regression.task3
 
+Good work!
 
+Luckily, I found the correct version of the dataset. I sent it to you. It is named simply `FSW`. Please, use it for further analysis.
+
+Now I want you to help me with analysing the relationship between the students' attainment and the income of their parents. I estimated an OLS regression model in which the reading test score is predicted by two variables: `cultpos` (index describing the availability of cultural resources in a household) and `income` (monthly household income):
+  `lm(READ_2009 ~ cultpos + income, FSW)`
+Although I don't expect the income effect to be strong when the availability of cultural resources is controlled for, it should be statistically significant.
+
+I think the skewness of the `income` distribution might cause some problems in the model. Perhaps you could propose a (nonlinear) transformation of `income`, so that the transformed variable is more strongly related to `READ_2009` and statistically significant (on a 0.05 significance level) when put instead of the original variable `income` into the regression model described above.
+
+Please, send me the expression describing such a transformation by calling:
+  `regression(subject = "transformation", content = expression(your transformation of income))`
+
+Best regards
+
+Professor Pearson
 
 ## TASK: regression.task4
 
+Very good!
 
+comment on 3rd task
+
+Please look at a somewhat more complicated model. I wanted to examine impact of multiple variables on reading test scores (`READ_2009`). There are variables describing sex and school type (track), and indicators of socio-economic status of student's family (`log(income)`, `homepos`, `hisei`, `csesi`) and of psychological tests scores (`RAVEN_WYN`, `STAI_C_WYN`, `STAI_S_WYN`, `SES_WYN`, `ZAMPS_WYN`). I estimate the model with:
+  `lm(READ_2009 ~ SEX + SCHOOL_TYPE + log(income) + homepos + hisei + csesi + RAVEN_WYN + STAI_C_WYN + STAI_S_WYN + SES_WYN + ZAMPS_WYN, FSW)`
+
+However, although each variable alone is a statistically significant predictor of `READ_2009` most of them turns out to be insignificant in this model.
+
+Perhaps the problem lies in some relationship between the predictors ... it's called "collinearity", or something like that... I think that removing some variables from the model will make the remaining ones statistically significant.
+
+Please find out which variables should be removed so that the remaining ones are significant at the 0.05 significance level. You should remove as few variables as possible.
+
+If you're done, send me the names of the variables to remove by calling:
+  `regression(subject = "Collinearity", content = character_vector_with_names_of_removed_variables)`
+
+Best regards
+
+Professor Pearson
 
 ## TASK: regression.task5
 
+It looks fine!
 
+I wonder whether you have tried to remove variables of some special properties or have simply written a code that checks all possible combinations of the predictors...
+
+Let's get back to the relationship between `hisei` and `READ_2009'. I wonder if it looks similar within different schools in the sample. It might be a general relationship or it might depend on a school context.
+
+Can you provide me a data frame consisting of two columns: `SCHOOL_ID` and `par_hisei`? The first column is self-descriptive and the second one should contain values of the slope parameter for `hisei` (from the OLS regression model) in each school.
+
+When you finish, please send me the data frame by calling:
+  `regression(subject = "Groups", content = data_frame_containig_results`)
+
+Best regards
+
+Professor Pearson
 
 ## TASK: regression.task6
 
+Great!
 
+Did you perform different regressions in each group or used one model with an interaction term between `hisei` and `factor(SCHOOL_ID)`?
+
+The variability between schools does not seem to be high with respect to the `hisei` parameter. However let's try to identify schools with bigger differences.
+
+The mean value of the slope parameter among schools is about 0.434. Can you identify schools for which the slope parameter value of `hisei` is statistically significantly different (at the 0.05 significance level) from the mean value among schools (0.434)? I want you to do this using the two-sided Wald t test (or the F test, which is equivalent in this case) on the basis of the OLS regression model (or its reparametrisation):
+  lm(READ_2009 ~ hisei * factor(SCHOOL_ID), FSW)
+
+As a result please send me a vector of `SCHOOL_ID` of the schools for which the slope parameter value is statistically significantly different from mean by calling:
+  `regression(subject = "Significant differences", content = vector_of_school_ids)`
+
+Best regards
+
+Professor Pearson
 
 ## TASK: regression.task7
 
+Well done!
 
+comment on 6th task
 
-## TASK: regression.task8
+Now let's turn to a little different issue. It's well known that in lower grades the cognitive abilities, as measured by for example in `READ_2009`, depend on pupils' age. At the upper-secondary level this effect is probably much lower or even non-existent but we should check it.
 
+There is another issue that complicates the analysis. In the sample there are students who started school one year earlier than they were supposed to (normally children in Poland start primary school at the age of 7 but under certain conditions they can start when they are 6 years old). These pupils are not representative for their cohort because they are selective (they are brighter than the average). On the other hand there are also pupils who are older than they should be. These are pupils who either started school one year later than they were supposed to or repeated a grade. Whatever the reason we can describe them as "negatively selected", i.e. they have usually lower cognitive abilities than other pupils of their age (who are not in our sample because when the study was conducted they were already in an upper grade).
 
+Because of that the relationship between `RAVEN_AGE` and `READ_2009` is perhaps not continuous: it can look different in some ranges of age than in others. Your task is to check how this relationship looks like and to propose a linear model describing it in a proper way.
 
+Please, send me the formula of the model by calling:
+  `regression(subject = "Age", content = READ_2009 ~ your_formula`
 
+Generally, your formula should contain transformations of only one variable: `RAVEN_AGE`. If you find it more convenient not to use explicit transformations in the formula (using `I()` or other functions), you can send me a formula containing additional variables you want to create. In such case you must call `regression()` function with an additional argument `vars` that will contain a named list of the expressions describing how to compute the additional variables. Nevertheless you can construct them only as transformations of `RAVEN_AGE`. Here is an example of such a call:
+  `regression(subject = "age", content = READ_2009 ~ RAVEN_AGE + AGE3, vars = list(AGE3 = expression(RAVEN_AGE^3)))`
+
+Best regards
+
+Professor Pearson
+
+## TASK: regression.congratulations
+
+Congratulations!
+You have solved all the problems and helped me analyse the data! I’m sure that your solutions will enable me to understand the causes of educational inequalities better and thus develop effective ways to reduce them.
+
+I wish you many interesting and challenging analytical problems to solve in the future! Remember: per aspera ad astra!
+
+Professor Pearson
+
+## TASK: regression.hint0
+
+No hint (but there might be a technical one - try `techHint=TRUE`)
+
+## TASK: regression.hint1
+
+No hint (but there might be a technical one - try `techHint=TRUE`)
+
+## TASK: regression.hint2
+
+If the relationship is linear, the quality of the prediction from a regression model can't be improved by adding nonlinear terms.
+
+## TASK: regression.hint3
+
+The distribution of `income` is highly right-skewed while the distribution of `READ_2009` is quite symmetric around mean. Try to find such a transformation that can reduce the right-skewness of `income` (i.e. that can "shorten its long tail").
+
+## TASK: regression.hint4
+
+A combination of different methods is needed to provide the right solution.
+
+## TASK: regression.hint5
+
+You can try two ways to deal with this: either estimate separate regression model for each school (some automation will be desirable) or estimate one model with an interaction term (remember that in the dataset `SCHOOL_ID` is not given as a factor). In the latter case you will probably have to transform the results a little to get the values you're interested in.
+
+## TASK: regression.hint6
+
+You can try to reparametrize the regression model by using proper contrasts so that the differences of interest will be model parameters. For a brief introduction to contrasts you can consult http://www.ats.ucla.edu/stat/r/library/contrast_coding.htm.
+Alternatively you can compute the Wald test for all schools slope coefficients.
+
+## TASK: regression.hint7
+
+The best way to see how a complex relationship between two variables generally looks like is to use graphical diagnostics.
+
+## TASK: regression.techHint0
+
+Just type `regression(subject = "Summer internship")` into the console and hit `enter`.
+
+## TASK: regression.techHint1
+
+Try to use the function `cor()`. Remember to specify the argument `use` when calling it.
+
+## TASK: regression.techHint2
+
+You can estimate a linear model using the `lm()` function.
+Coefficients as well as most important goodness-of-fit measures can be obtained by running the `summary()` function on the model object returned by `lm()`.
+
+## TASK: regression.techHint3
+
+You can visualise the distribution of a continuous variable using the combination of `plot()` and `density()` functions.
+
+## TASK: regression.techHint4
+
+The `vif()` function form the `car` package provides a collinearity diagnostics.
+
+## TASK: regression.techHint5
+
+No hint (but there might be a methodological one - try `hint=TRUE`)
+
+## TASK: regression.techHint6
+
+You can use the `C(data, contrastFunction)` function to set the variable contrast. There are many ready-to-use functions generating contrasts (look for functions whose names start with `contr.`).
+If you have decided to compute the Wald test, you can obtain the coefficient values and their standard errors from `summary(model)$coef`.
+
+## TASK: regression.techHint7
+
+You can try to use `geom_points()` and `geom_smooth()` from the `ggplot2` package or, if you are not familiar with `ggplot2`, simply use the `plot()` function.

@@ -8,6 +8,7 @@
 #' \dontrun{
 #'  get_commands("./misc/proton/commands.txt")
 #'  get_commands("./misc/frequon/commands.txt")
+#'  get_commands("./misc/regression/commands.txt")
 #' }
 #'
 #' @author
