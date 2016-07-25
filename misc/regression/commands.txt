@@ -15,6 +15,57 @@ If you want to help Beta and Bit in their analysis, type:
 
 If you need help, try to add `hint = TRUE` and/or `techHint = TRUE` argument to the `regression()` function call.
 
+## TASK: regression.wrongAnswer
+
+This doesn't seem to be a correct result.
+
+## TASK: regression.notSoFar
+
+Solve previous tasks first!
+
 ## TASK: regression.task1
+
+Dear Beta and Bit,
+
+I sent you a dataset named 'dataFSW' for an analysis. An additional dataset called 'varLabels' contains variable labels so that you can check what each variable measures.
+
+Let's start with something simple. Can you compute for me the correlations between the measures of cognitive abilities (`MATH_2009`, `READ_2009`, `SCIE_2009`) and the highest parental International Socio-Economic Index `hisei`?
+
+You should get three correlations.
+
+Please send me back a vector containing these three correlations by calling:
+  `regression(subject = "Correlations", content = "vector of correlations")`
+
+Best regards
+
+Professor Pearson
+
+## TASK: regression.task2
+
+
+
+## TASK: regression.task3
+
+
+
+## TASK: regression.task4
+
+
+
+## TASK: regression.task5
+
+
+
+## TASK: regression.task6
+
+
+
+## TASK: regression.task7
+
+
+
+## TASK: regression.task8
+
+
 
 
