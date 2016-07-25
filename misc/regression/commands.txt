@@ -15,15 +15,15 @@ If you want to help Beta and Bit in their analysis, type:
 
 If you need help, try to add `hint = TRUE` and/or `techHint = TRUE` argument to the `regression()` function call.
 
-## TASK: regression.wrongAnswer
+## TASK: wrongAnswer
 
 This doesn't seem to be a correct result.
 
-## TASK: regression.notSoFar
+## TASK: notSoFar
 
 Solve previous tasks first!
 
-## TASK: regression.task1
+## TASK: task1
 
 Dear Beta and Bit,
 
@@ -40,7 +40,7 @@ Best regards
 
 Professor Pearson
 
-## TASK: regression.task2
+## TASK: task2
 
 Dear Beta and Bit,
 
@@ -55,7 +55,7 @@ Best regards
 
 Professor Pearson
 
-## TASK: regression.task3
+## TASK: task3
 
 Good work!
 
@@ -74,7 +74,7 @@ Best regards
 
 Professor Pearson
 
-## TASK: regression.task4
+## TASK: task4
 
 Very good!
 
@@ -96,7 +96,7 @@ Best regards
 
 Professor Pearson
 
-## TASK: regression.task5
+## TASK: task5
 
 It looks fine!
 
@@ -113,7 +113,7 @@ Best regards
 
 Professor Pearson
 
-## TASK: regression.task6
+## TASK: task6
 
 Great!
 
@@ -131,7 +131,7 @@ Best regards
 
 Professor Pearson
 
-## TASK: regression.task7
+## TASK: task7
 
 Well done!
 
@@ -153,7 +153,7 @@ Best regards
 
 Professor Pearson
 
-## TASK: regression.congratulations
+## TASK: congratulations
 
 Congratulations!
 You have solved all the problems and helped me analyse the data! I’m sure that your solutions will enable me to understand the causes of educational inequalities better and thus develop effective ways to reduce them.
@@ -162,69 +162,69 @@ I wish you many interesting and challenging analytical problems to solve in the 
 
 Professor Pearson
 
-## TASK: regression.hint0
+## TASK: hint0
 
 No hint (but there might be a technical one - try `techHint=TRUE`)
 
-## TASK: regression.hint1
+## TASK: hint1
 
 No hint (but there might be a technical one - try `techHint=TRUE`)
 
-## TASK: regression.hint2
+## TASK: hint2
 
 If the relationship is linear, the quality of the prediction from a regression model can't be improved by adding nonlinear terms.
 
-## TASK: regression.hint3
+## TASK: hint3
 
 The distribution of `income` is highly right-skewed while the distribution of `READ_2009` is quite symmetric around mean. Try to find such a transformation that can reduce the right-skewness of `income` (i.e. that can "shorten its long tail").
 
-## TASK: regression.hint4
+## TASK: hint4
 
 A combination of different methods is needed to provide the right solution.
 
-## TASK: regression.hint5
+## TASK: hint5
 
 You can try two ways to deal with this: either estimate separate regression model for each school (some automation will be desirable) or estimate one model with an interaction term (remember that in the dataset `SCHOOL_ID` is not given as a factor). In the latter case you will probably have to transform the results a little to get the values you're interested in.
 
-## TASK: regression.hint6
+## TASK: hint6
 
 You can try to reparametrize the regression model by using proper contrasts so that the differences of interest will be model parameters. For a brief introduction to contrasts you can consult http://www.ats.ucla.edu/stat/r/library/contrast_coding.htm.
 Alternatively you can compute the Wald test for all schools slope coefficients.
 
-## TASK: regression.hint7
+## TASK: hint7
 
 The best way to see how a complex relationship between two variables generally looks like is to use graphical diagnostics.
 
-## TASK: regression.techHint0
+## TASK: techHint0
 
 Just type `regression(subject = "Summer internship")` into the console and hit `enter`.
 
-## TASK: regression.techHint1
+## TASK: techHint1
 
 Try to use the function `cor()`. Remember to specify the argument `use` when calling it.
 
-## TASK: regression.techHint2
+## TASK: techHint2
 
 You can estimate a linear model using the `lm()` function.
 Coefficients as well as most important goodness-of-fit measures can be obtained by running the `summary()` function on the model object returned by `lm()`.
 
-## TASK: regression.techHint3
+## TASK: techHint3
 
 You can visualise the distribution of a continuous variable using the combination of `plot()` and `density()` functions.
 
-## TASK: regression.techHint4
+## TASK: techHint4
 
 The `vif()` function form the `car` package provides a collinearity diagnostics.
 
-## TASK: regression.techHint5
+## TASK: techHint5
 
 No hint (but there might be a methodological one - try `hint=TRUE`)
 
-## TASK: regression.techHint6
+## TASK: techHint6
 
 You can use the `C(data, contrastFunction)` function to set the variable contrast. There are many ready-to-use functions generating contrasts (look for functions whose names start with `contr.`).
 If you have decided to compute the Wald test, you can obtain the coefficient values and their standard errors from `summary(model)$coef`.
 
-## TASK: regression.techHint7
+## TASK: techHint7
 
 You can try to use `geom_points()` and `geom_smooth()` from the `ggplot2` package or, if you are not familiar with `ggplot2`, simply use the `plot()` function.
