@@ -1,0 +1,20 @@
+## TASK: regressionInit
+                                                                                 
+ _____ _          _____                         _            _____               
+|_   _| |_ ___   | __  |___ ___ ___ ___ ___ ___|_|___ ___   |   __|___ _____ ___ 
+  | | |   | -_|  |    -| -_| . |  _| -_|_ -|_ -| | . |   |  |  |  | .'|     | -_|
+  |_| |_|_|___|  |__|__|___|_  |_| |___|___|___|_|___|_|_|  |_____|__,|_|_|_|___|
+                           |___|                                                 
+
+During their summer internship Beta and Bit are helping professor Pearson to analyse data from his educational research on Polish upper-secondary schools students.
+
+Professor Pearson is mostly interested in educational inequalities, particularly in how the socio-economic status of the parents affects their children's educational attainment. He hopes his research will help to develop programmes providing support to young people from disadvantaged families and reducing inequalities in our society.
+
+If you want to help Beta and Bit in their analysis, type:
+  regression(subject = "Summer internship")
+
+If you need help, try to add `hint = TRUE` and/or `techHint = TRUE` argument to the `regression()` function call.
+
+## TASK: regression.task1
+
+
