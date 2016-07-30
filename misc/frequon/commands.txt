@@ -68,7 +68,7 @@ Great job! Now, when we do know which letters are used the most often and which 
 We have prepared and attached the `EnglishLetterFrequency` dataset.
 It contains frequencies of letters in the English language.
 
-Now you can substitute old ciphered letters with the new English letters according to their frequencies.
+Now you can substitute old ciphered letters with the new English letters according to their frequencies in the attached corpus.
 Such operation is called character translation / transliteration.
 Can you pass the transliterated message to us?
 
