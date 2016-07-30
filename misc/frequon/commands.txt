@@ -1,5 +1,9 @@
 ## TASK: intro
-
+ _____ _          _____                            _____
+|_   _| |_ ___   |   __|___ ___ ___ _ _ ___ ___   |   __|___ _____ ___
+  | | |   | -_|  |   __|  _| -_| . | | | . |   |  |  |  | .'|     | -_|
+  |_| |_|_|___|  |__|  |_| |___|_  |___|___|_|_|  |_____|__,|_|_|_|___|
+                                 |_|
 You've Got Mail
 
 From: 154eb7278fc44650bdd2bb39bb2b5c69@mail.tor
@@ -64,7 +68,7 @@ Great job! Now, when we do know which letters are used the most often and which 
 We have prepared and attached the `EnglishLetterFrequency` dataset.
 It contains frequencies of letters in the English language.
 
-Now you can substitute old ciphered letters with the new English letters.
+Now you can substitute old ciphered letters with the new English letters according to their frequencies.
 Such operation is called character translation / transliteration.
 Can you pass the transliterated message to us?
 
