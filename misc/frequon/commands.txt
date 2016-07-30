@@ -102,7 +102,8 @@ Find the right transliteration in order to decode it into the proper English.
 Work with lowercased text.
 
 Type:
-`frequon( subject="Re: Key", content=c(old = "abcdef....z", new = "newlettersrespectively"))`, where `old` are the letters in the code`s sense and `new` are fitted real letters.
+`frequon( subject="Re: Key", content=c(old = "abcdef....z", new = "newlettersrespectively"))`,
+where `old` are the letters in the message `roses` while `new` are fitted real letters.
 
 Good luck!
 
